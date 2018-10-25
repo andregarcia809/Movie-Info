@@ -1,16 +1,134 @@
-#movies img, #movie img{
-    width: 100%;
-}
-
-@media(min-width: 960px){
-    #movies .col-md-3 .well{
-        height: 390px,
-    }
-
-    #movies .col-md-3 img{
-        height: 240px,
-    }
+html,
+body {
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/55b0a8b4-0198-4ac8-8426-58ad298c8ea0/6b2061f7-7d57-4a06-8cb6-93692ef29107/US-en-20181022-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 
 }
 
- 
+nav {
+  margin: 0 !important;
+}
+
+nav a {
+  zoom: 1.5;
+}
+
+@media screen and (max-width: 760px) {
+  zoom: 0;
+}
+
+nav img {
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10rem;
+}
+
+.title img {
+  text-align: center;
+  color: #b2000c;
+  font-size: 10rem;
+}
+
+.container {
+  position: fixed;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+}
+
+.jumbotron {
+  margin-top: 15rem;
+  background: rgba(10, 0, 1, 0.897);
+  animation: 1.2s search-background-in ease-out backwards 0.5s;
+}
+
+.jumbotron h3 {
+  color: #b2000c;
+  font-size: 5rem;
+  animation: 1.2s silde-in ease-out backwards 1.7s;
+  position: relative;
+
+}
+
+/* small mobile phone */
+@media screen and (min-width: 325px) {
+  .jumbotron h3 {
+    font-size: 2rem;
+  }
+}
+
+/* mobile phone  */
+@media screen and (min-width: 475px) {
+  .jumbotron h3 {
+    font-size: 4rem;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 760px) {
+  .jumbotron h3 {
+    font-size: 5rem;
+  }
+}
+
+#movies img,
+#movie img {
+  width: 100%;
+}
+
+#movie img {
+  height: 650px;
+}
+
+/* tablet */
+@media(min-width: 960px) {
+  #movies .col-md-3 .well {
+    height: 390px,
+  }
+
+  #movies .col-md-3 img {
+    height: 240px,
+  }
+}
+
+.well {
+  background-color: #000;
+}
+
+/* Search box animation  */
+@keyframes search-background-in {
+  from {
+    opacity: 0;
+    transform: scale(1.1) translateY(3%);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Search box title animation  */
+@keyframes silde-in {
+  0% {
+    opacity: 0;
+    left: -250px;
+  }
+
+  30% {
+
+    left: 50px;
+  }
+
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
