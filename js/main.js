@@ -6,8 +6,9 @@ $(document).ready(() => {
 
     });
 });
+
 function getMovies(searchText) {
-    axios.get("http://api.themoviedb.org/3/search/movie?api_key=98325a9d3ed3ec225e41ccc4d360c817&language=en-US&query=" + searchText)
+    axios.get("https://api.themoviedb.org/3/search/movie?api_key=98325a9d3ed3ec225e41ccc4d360c817&language=en-US&query=" + searchText)
         .then((response) => {
             let movies = response.data.results;
             let output = "";
